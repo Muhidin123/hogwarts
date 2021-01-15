@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 
 class Filters extends Component {
-
   render() {
     return (
       <div className="ui form">
         <h3>Pick greased or not greased</h3>
         <div className="field">
-          {/* <select name="type" id="type"> */}
-          {/* <option value={true}>Greased</option> */}
-          {/* <option value={false}>Not Greased</option> */}
-          {/* </select> */}
+          <button className="ui primary button" onClick={this.props.sortName}>Sort by name</button>
+          <button className="ui primary button" onClick= {this.props.sortWeight}>Sort by weight</button>
         </div>
 
         <div className="field">

@@ -6,23 +6,34 @@ export class Card extends Component {
 
     this.state = {
       style: false,
+      cardStyle: false,
     };
   }
 
   changeStyle = () => {
     this.setState({
+      ...this.state,
       style: !this.state.style,
     });
   };
+
+  hideShowCard = () => {
+    this.setState({
+      ...this.state,
+      cardStyle: !this.state.cardStyle,
+    });
+  };
+
   render() {
     const { name, specialty, greased, weight } = this.props.onePig;
     let nameUrl = name.toLowerCase().split(" ").join("_");
     let pigImage = require(`../hog-imgs/${nameUrl}.jpg`);
 
     let divStyle = this.state.style ? "block" : "none";
+    let cardStyle = this.state.cardStyle ? "none" : "block";
 
     return (
-      <div className="ui card">
+      <div className="ui card six wide column" style={{ display: cardStyle }}>
         <div className="image">
           <img src={pigImage} alt="" onClick={this.changeStyle} />
         </div>
@@ -41,6 +52,9 @@ export class Card extends Component {
             </a>
             /
           </div>
+          <button className="ui primary button" onClick={this.hideShowCard}>
+            HIDE
+          </button>
         </div>
       </div>
     );

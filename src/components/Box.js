@@ -30,8 +30,10 @@ export class Box extends Component {
         <Filter
           currentState={this.state.greased}
           changeFilter={this.applyFilter}
+          sortName={this.props.sortName}
+          sortWeight={this.props.sortWeight}
         />{" "}
-        {card}{" "}
+        <div className="ui three stackable cards">{card} </div>
       </div>
     );
   }
