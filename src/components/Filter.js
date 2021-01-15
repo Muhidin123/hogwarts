@@ -4,7 +4,7 @@ class Filters extends Component {
   render() {
     return (
       <div className="ui form">
-        <h3>Pick greased or not greased</h3>
+        <h3>SORT OR FILTER</h3>
         <div className="field">
           <button className="ui primary button" onClick={this.props.sortName}>Sort by name</button>
           <button className="ui primary button" onClick= {this.props.sortWeight}>Sort by weight</button>

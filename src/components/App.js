@@ -61,7 +61,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
         <Box
           allPigs={this.state.pigs}
           sortName={this.sortByName}
